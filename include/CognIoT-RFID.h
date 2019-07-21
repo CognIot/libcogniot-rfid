@@ -17,7 +17,10 @@
 #define	TAGMODE_b	0x02	// Hitag H1/S (factory default)
 #define	TAGMODE_c	0x03	// EM/MC2000
 
-
+typedef struct taginfo_struct {
+	char **tagresponse;
+	int tagmode;
+} taginfo;
 
 extern int	WaitForCTS( int *sPort, int GPIO_PIN);
 
@@ -26,3 +29,5 @@ extern int	GetCmdResult( int *sPort, int cmd, char **result);
 extern int	SendCmds( int *sPort, int *cmds, char *result);
 
 extern int	SetTagMode( int *sPort, int mode);
+
+extern int	DeCodeTag( char **result);

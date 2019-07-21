@@ -13,7 +13,7 @@ all: $(OUTPUTFILE)
 
 # Build CognIoT API library from source
 
-$(OUTPUTFILE): src/GetCmdResult.o src/SendCmds.o src/SetTagMode.o src/WaitForCTS.o
+$(OUTPUTFILE): src/GetCmdResult.o src/SendCmds.o src/SetTagMode.o src/WaitForCTS.o src/DeCodeTag.o
 	ar crv $@ $^
 	ranlib $@
 
