@@ -19,7 +19,7 @@
 #include "../include/CognIoT-RFID.h"
 
 
-int	DeCodeTag( char **result)
+int	DeCodeTag( struct taginfo_struct taginfo)
 {
 
 

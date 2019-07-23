@@ -30,4 +30,4 @@ extern int	SendCmds( int *sPort, int *cmds, char *result);
 
 extern int	SetTagMode( int *sPort, int mode);
 
-extern int	DeCodeTag( char **result);
+extern int	DeCodeTag( struct taginfo_struct taginfo);
